@@ -172,14 +172,11 @@
         { apellido: "Rojas Marrufo", grupo: ["Gran Familia de tíos y Primitos Rojas Tía Muni e hijas mono Mariana y Super cerdita Tio Melvis y los 70 hijos Tia Chine Gorda Tia María y Mariangel Tía Massiel y Jesús Ángel y Abuela Nelly"]},
     ];
 
-    // ATENCIÓN: Debes reemplazar estos dos valores por los de tu propio formulario de Google.
-    // He corregido el ID del formulario, el que tenías era incorrecto.
     const ID_DEL_FORMULARIO = '1FAIpQLSfagnIl2fqFvwGEVqaGzuLnCW_ABCXk-a6OGU0UdK0fwK-CjQ';
     const ID_DE_PREGUNTA = '1281607340';
 
-    // Agrega un escuchador de eventos para el envío del formulario
     document.getElementById("searchForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Evita que la página se recargue
+        event.preventDefault();
         buscarInvitado();
     });
 
@@ -219,14 +216,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
