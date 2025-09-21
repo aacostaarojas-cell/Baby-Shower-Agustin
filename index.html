@@ -198,20 +198,29 @@
             });
             listaNombres += "</ul>";
 
+            // Crea un string con los nombres del grupo separados por comas
+            const nombresParaFormulario = invitado.grupo.join(", ");
+            // Codifica el string para que pueda usarse en una URL
+            const nombresCodificados = encodeURIComponent(nombresParaFormulario);
+
+            // Importante: Debes reemplazar 'TU_URL_DEL_FORMULARIO_AQUI' con la URL real de tu Google Form.
+            // Para encontrarla: En tu Formulario de Google, haz clic en "Enviar" y luego en el icono de enlace (<>).
+            // Luego, añade un parámetro para pre-llenar los nombres.
+            // Ejemplo de URL: https://docs.google.com/forms/d/e/1FAIpQLSdjhN.../viewform?entry.123456789=${nombresCodificados}
+            // Debes cambiar 'entry.123456789' por el ID de la pregunta "Nombre(s) del invitado(s)".
+            const urlFormulario = `https://docs.google.com/forms/d/e/TU_ID_DE_FORMULARIO/viewform?entry.TU_ID_DE_PREGUNTA=${nombresCodificados}`;
+
             resultado.innerHTML = `
                 <p>¡Hola familia <b>${invitado.apellido}</b> 👋!</p>
                 <p>Ustedes son los invitados:</p>
                 <div class="nombres">${listaNombres}</div>
+                <p>Por favor, confirma tu asistencia en el siguiente enlace:</p>
+                <a href="${urlFormulario}" target="_blank">
+                    <button style="width:auto; padding: 10px 20px;">Confirmar Asistencia</button>
+                </a>
             `;
         } else {
             resultado.innerHTML = `<p class="not-found">😢 Apellido no encontrado, por favor, revisa que esté bien escrito.</p>`;
         }
     }
 </script>
-
-</body>
-</html>
-
-
-
-
