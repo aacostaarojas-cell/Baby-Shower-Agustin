@@ -203,12 +203,12 @@
             // Codifica el string para que pueda usarse en una URL
             const nombresCodificados = encodeURIComponent(nombresParaFormulario);
 
-            // Importante: Debes reemplazar 'TU_URL_DEL_FORMULARIO_AQUI' con la URL real de tu Google Form.
+            // Importante: Debes reemplazar 'https://docs.google.com/spreadsheets/d/18SqjN8O8vZrlEDOsST4NGgx5ZrTsl81NUaSc6xXMigw/edit?resourcekey=&gid=1258307210#gid=1258307210' con la URL real de tu Google Form.
             // Para encontrarla: En tu Formulario de Google, haz clic en "Enviar" y luego en el icono de enlace (<>).
             // Luego, añade un parámetro para pre-llenar los nombres.
             // Ejemplo de URL: https://docs.google.com/forms/d/e/1FAIpQLSdjhN.../viewform?entry.123456789=${nombresCodificados}
             // Debes cambiar 'entry.123456789' por el ID de la pregunta "Nombre(s) del invitado(s)".
-            const urlFormulario = `https://docs.google.com/forms/d/e/TU_ID_DE_FORMULARIO/viewform?entry.TU_ID_DE_PREGUNTA=${nombresCodificados}`;
+            const urlFormulario = https://docs.google.com/spreadsheets/d/18SqjN8O8vZrlEDOsST4NGgx5ZrTsl81NUaSc6xXMigw/edit?resourcekey=&gid=1258307210#gid=1258307210=${nombresCodificados}`;
 
             resultado.innerHTML = `
                 <p>¡Hola familia <b>${invitado.apellido}</b> 👋!</p>
@@ -224,3 +224,4 @@
         }
     }
 </script>
+
