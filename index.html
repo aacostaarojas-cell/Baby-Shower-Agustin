@@ -149,7 +149,7 @@
         { apellido: "Acosta", grupo: ["Santiago Acosta", "Magdalena Acosta"]},
         { apellido: "Ovalles", grupo: ["Thays Ovales", "Junior Ovalles", "Hanah Ovalles"]},
         { apellido: "Lopez", grupo: ["Juanny Lopez", "German Gonzalez", "Isaias Gonzalez"]},
-        { apellido: "Colmenares", grupo: ["Mario Colmenares", "Kaolys Roble"]},
+        { apellido: "Colmenares", grupo: ["Mario Colmenares", "Kaolis Colmenares"]},
         { apellido: "Gaido", grupo: ["Hugo Gaido", "María Ignacia Gaido", "Crescente Gaido", "Santino Gaido"]},
         { apellido: "Magallon", grupo: ["Nicolas Magallón", "Esposa Nicolas", "Baltazar Magallón"]},
         { apellido: "Matos", grupo: ["Roberto Matos", "Tabatha Rodriguez"]},
@@ -163,8 +163,6 @@
         { apellido: "Primera", grupo: ["Daniel Primera"]},
         { apellido: "Garzon", grupo: ["Marcos Garzon"]},
         { apellido: "Marvez", grupo: ["Ana Marvez"]},
-        { apellido: "Muñoz", grupo: ["Eligia Muñoz", "Alfonso Jabasi", "Tobey de Asis", "Anderson Ramos", "Valentina Ramos"]},
-        { apellido: "Benitez", grupo: ["Sebastián Benitez"]},
     ];
 
     function buscarInvitado() {
@@ -185,10 +183,10 @@
             const nombresCodificados = encodeURIComponent(nombresParaFormulario);
 
             // ATENCIÓN: Debes reemplazar estos dos valores por los de tu propio formulario de Google.
-            const ID_DEL_FORMULARIO = 'https://docs.google.com/forms/d/e/1FAIpQLSfagnIl2fqFvwGEVqaGzuLnCW_ABCXk-a6OGU0UdK0fwK-CjQ/viewform?usp=pp_url';
+            const ID_DEL_FORMULARIO = 'https://forms.gle/m7BaNPmXci8YgZfj8';
             const ID_DE_PREGUNTA = '1258307210';
 
-            const urlFormulario = `https://docs.google.com/forms/d/e/${https://docs.google.com/forms/d/e/1FAIpQLSfagnIl2fqFvwGEVqaGzuLnCW_ABCXk-a6OGU0UdK0fwK-CjQ/viewform?usp=pp_url}/viewform?entry.${ID_DE_PREGUNTA}=${nombresCodificados}`;
+            const urlFormulario = `https://docs.google.com/forms/d/e/${ID_DEL_FORMULARIO}/viewform?entry.${ID_DE_PREGUNTA}=${nombresCodificados}`;
 
             resultado.innerHTML = `
                 <p>¡Hola familia <b>${invitado.apellido}</b> 👋!</p>
@@ -207,4 +205,5 @@
 
 </body>
 </html>
+
 
